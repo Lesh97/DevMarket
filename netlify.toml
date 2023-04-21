@@ -45,6 +45,9 @@ from = "/api/*"
 to = "/.netlify/functions/__api"
 status = 200
 
+[[plugins]]
+package = "@netlify/plugin-gatsby"
+
 [context]
 
   [context.production]
