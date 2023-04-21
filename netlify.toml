@@ -36,10 +36,6 @@
   ]
   node_bundler = "esbuild"
 
-[build]
-publish = "publish"
-command = "npm run build"
-
 [context]
 
   [context.production]
