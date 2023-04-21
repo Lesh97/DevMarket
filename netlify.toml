@@ -1,5 +1,131 @@
-[context.production]
-environment = { NODE_VERSION = "18.15.0" }
+[functions]
+
+  [functions.__api]
+  included_files = [
+    "/opt/build/repo/.cache/functions/**"
+  ]
+  external_node_modules = [
+    "msgpackr-extract"
+  ]
+
+  [functions.__dsg]
+  included_files = [
+    "public/404.html",
+    "public/500.html",
+    "/opt/build/repo/.cache/query-engine/**",
+    "/opt/build/repo/.cache/page-ssr/**",
+    "!**/*.js.map",
+    "/opt/build/repo/.cache/data/**"
+  ]
+  external_node_modules = [
+    "msgpackr-extract"
+  ]
+  node_bundler = "esbuild"
+
+  [functions.__ssr]
+  included_files = [
+    "public/404.html",
+    "public/500.html",
+    "/opt/build/repo/.cache/query-engine/**",
+    "/opt/build/repo/.cache/page-ssr/**",
+    "!**/*.js.map",
+    "/opt/build/repo/.cache/data/**"
+  ]
+  external_node_modules = [
+    "msgpackr-extract"
+  ]
+  node_bundler = "esbuild"
+
 [build]
 publish = "publish"
 command = "npm run build"
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/__api"
+status = 200
+
+[context]
+
+  [context.production]
+
+    [context.production.environment]
+    NODE_VERSION = "18.15.0"
+
+    [context.production.functions]
+
+      [context.production.functions.__api]
+      included_files = [
+        "/opt/build/repo/.cache/functions/**"
+      ]
+      external_node_modules = [
+        "msgpackr-extract"
+      ]
+
+      [context.production.functions.__dsg]
+      included_files = [
+        "public/404.html",
+        "public/500.html",
+        "/opt/build/repo/.cache/query-engine/**",
+        "/opt/build/repo/.cache/page-ssr/**",
+        "!**/*.js.map",
+        "/opt/build/repo/.cache/data/**"
+      ]
+      external_node_modules = [
+        "msgpackr-extract"
+      ]
+      node_bundler = "esbuild"
+
+      [context.production.functions.__ssr]
+      included_files = [
+        "public/404.html",
+        "public/500.html",
+        "/opt/build/repo/.cache/query-engine/**",
+        "/opt/build/repo/.cache/page-ssr/**",
+        "!**/*.js.map",
+        "/opt/build/repo/.cache/data/**"
+      ]
+      external_node_modules = [
+        "msgpackr-extract"
+      ]
+      node_bundler = "esbuild"
+
+  [context.master]
+
+    [context.master.functions]
+
+      [context.master.functions.__api]
+      included_files = [
+        "/opt/build/repo/.cache/functions/**"
+      ]
+      external_node_modules = [
+        "msgpackr-extract"
+      ]
+
+      [context.master.functions.__dsg]
+      included_files = [
+        "public/404.html",
+        "public/500.html",
+        "/opt/build/repo/.cache/query-engine/**",
+        "/opt/build/repo/.cache/page-ssr/**",
+        "!**/*.js.map",
+        "/opt/build/repo/.cache/data/**"
+      ]
+      external_node_modules = [
+        "msgpackr-extract"
+      ]
+      node_bundler = "esbuild"
+
+      [context.master.functions.__ssr]
+      included_files = [
+        "public/404.html",
+        "public/500.html",
+        "/opt/build/repo/.cache/query-engine/**",
+        "/opt/build/repo/.cache/page-ssr/**",
+        "!**/*.js.map",
+        "/opt/build/repo/.cache/data/**"
+      ]
+      external_node_modules = [
+        "msgpackr-extract"
+      ]
+      node_bundler = "esbuild"
