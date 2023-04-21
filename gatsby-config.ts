@@ -15,7 +15,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        spaceId: "iq7hqrsx26ma",
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },

@@ -1,8 +1,8 @@
 import * as React from "react";
-import { graphql, HeadFC, Link, PageProps } from "gatsby";
+import { graphql, Link, PageProps } from "gatsby";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function IndexPage({
   data,
