@@ -1,3 +1,5 @@
+import { faDev } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "gatsby";
 import React from "react";
 
@@ -12,13 +14,15 @@ export default function Layout({ children, title }: ILayoutProps) {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <FontAwesomeIcon icon={faDev} size="2x" />
+            </Link>
           </li>
           <li>
             <Link to="/about-us">About-us</Link>
           </li>
           <li>
-            <Link to="/blog">Blog</Link>
+            <Link to="/blog">공지사항</Link>
           </li>
         </ul>
       </nav>

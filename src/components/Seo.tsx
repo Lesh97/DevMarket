@@ -15,6 +15,5 @@ export default function Seo({ title }: ISeoProps) {
       }
     }
   `);
-  console.log(data.site?.siteMetadata?.title);
   return <title>{title} | Dev Accessary</title>;
 }

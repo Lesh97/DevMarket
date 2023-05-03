@@ -1,1 +1,18 @@
 @import url("https://unpkg.com/@picocss/pico@latest/css/pico.min.css");
+
+.container {
+  max-width: 1500px;
+}
+
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#productChoose {
+  border: 1px solid black;
+  width: 500px;
+  height: 600px;
+}

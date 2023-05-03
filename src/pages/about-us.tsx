@@ -5,7 +5,7 @@ import Seo from "../components/Seo";
 export default function AboutUs() {
   return (
     <Layout title="About-us">
-      <p>We are the happies accessary store.12</p>
+      <p>개발에 필요한 다양한 악세서리들, 제품을 만나보세요!</p>
     </Layout>
   );
 }

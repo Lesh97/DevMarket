@@ -11,12 +11,16 @@ export default function ProductDetail({
   );
   return (
     <Layout title={data.contentfulPeripheralDevice?.name!}>
-      <GatsbyImage
-        image={image!}
-        alt={data.contentfulPeripheralDevice?.name!}
-      ></GatsbyImage>
-      <h2>${data.contentfulPeripheralDevice?.name}</h2>
-      <div />
+      <div id="container">
+        <GatsbyImage
+          image={image!}
+          alt={data.contentfulPeripheralDevice?.name!}
+        ></GatsbyImage>
+        <div id="productChoose">
+          <h2>hihi</h2>
+        </div>
+      </div>
+      <h2>{data.contentfulPeripheralDevice?.name}</h2>
     </Layout>
   );
 }
@@ -27,7 +31,7 @@ export const query = graphql`
       name
       price
       preview {
-        gatsbyImageData(height: 10, placeholder: DOMINANT_COLOR)
+        gatsbyImageData(height: 600, width: 800, placeholder: DOMINANT_COLOR)
       }
     }
   }

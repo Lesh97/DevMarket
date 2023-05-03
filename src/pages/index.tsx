@@ -8,7 +8,7 @@ export default function IndexPage({
   data,
 }: PageProps<Queries.AccessariesQuery>) {
   return (
-    <Layout title="welcome to my dev accessary">
+    <Layout title="개발에 필요한 주변 악세서리, DevAcc">
       <div className="grid">
         {data.allContentfulPeripheralDevice.nodes.map((acc) => (
           <article>
@@ -35,7 +35,7 @@ export const query = graphql`
         name
         price
         preview {
-          gatsbyImageData(placeholder: BLURRED, height: 250)
+          gatsbyImageData(placeholder: BLURRED, height: 400, width: 400)
         }
       }
     }
