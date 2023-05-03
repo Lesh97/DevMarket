@@ -1,14 +1,15 @@
-import * as React from "react";
-import { graphql, Link, PageProps } from "gatsby";
+import { Link, PageProps } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-export default function IndexPage({
+export default function Bluetooth({
   data,
 }: PageProps<Queries.AccessariesQuery>) {
   return (
-    <Layout title="개발에 필요한 주변 악세서리, DevAcc">
+    <Layout title="블루투스">
+      <p>개발에 질을 올려주는 블루투스 제품들.</p>
       <div className="grid">
         {data.allContentfulPeripheralDevice.nodes.map((acc) => (
           <article>
@@ -27,19 +28,4 @@ export default function IndexPage({
   );
 }
 
-export const query = graphql`
-  query Accessaries {
-    allContentfulPeripheralDevice {
-      nodes {
-        id
-        name
-        price
-        preview {
-          gatsbyImageData(placeholder: BLURRED, height: 400, width: 400)
-        }
-      }
-    }
-  }
-`;
-
-export const Head = () => <Seo title="Home" />;
+export const Head = () => <Seo title="블루투스" />;

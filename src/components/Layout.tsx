@@ -15,8 +15,26 @@ export default function Layout({ children, title }: ILayoutProps) {
         <ul>
           <li>
             <Link to="/">
-              <FontAwesomeIcon icon={faDev} size="2x" />
+              <FontAwesomeIcon icon={faDev} size="3x" />
             </Link>
+          </li>
+          <li>
+            <Link to="/monitor">모니터</Link>
+          </li>
+          <li>
+            <Link to="/mouse">마우스</Link>
+          </li>
+          <li>
+            <Link to="/keyboard">키보드</Link>
+          </li>
+          <li>
+            <Link to="/camera">카메라</Link>
+          </li>
+          <li>
+            <Link to="/mic">마이크</Link>
+          </li>
+          <li>
+            <Link to="/bluetooth">블루투스 기기</Link>
           </li>
           <li>
             <Link to="/about-us">About-us</Link>
