@@ -1,6 +1,6 @@
 import { graphql, Link, PageProps } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import React from "react";
+import * as React from "react";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 

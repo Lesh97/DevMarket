@@ -17,7 +17,7 @@ export default function ProductDetail({
           alt={data.contentfulPeripheralDevice?.name!}
         ></GatsbyImage>
         <div id="productChoose">
-          <h2>hihi</h2>
+          <h2>이곳은 제품 선택 파트입니다.</h2>
         </div>
       </div>
       <h2>{data.contentfulPeripheralDevice?.name}</h2>
